@@ -24,7 +24,7 @@ public class Link {
 	}
 	
 	
-	/** méthode qui verifie si le noeud en paramètre fait partie du lien
+	/** méthode qui verifie si le noeud en paramètre fait partie du lien, start ou end
 	 * @param node
 	 * @return true || false
 	 */

@@ -15,7 +15,7 @@ public class Virus {
 
 		for (Link link : network.getLinks()) {
 			boolean found=false;
-			// on cherche la passerelle la plus proche de la position de l'agent skynet
+			// chercheer la passerelle la plus proche de la position de l'agent skynet
 			for (Node getway : network.getGetways()) {
 				if(link.hasNode(agentPosition) && link.hasNode(getway)){
 				result=link;

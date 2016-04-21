@@ -33,7 +33,7 @@ public class Network {
 	}
 
 	/**
-	 * initialise les noeud.
+	 * initialiser les noeuds du réseau.
 	 * 
 	 * @param nbNodes
 	 */
@@ -45,7 +45,7 @@ public class Network {
 	}
 
 	/**
-	 * cherche un noeud paar son index
+	 * cherche un noeud par son index
 	 * 
 	 * @param index
 	 * @return
@@ -56,7 +56,7 @@ public class Network {
 				return node;
 			}
 		}
-		throw new IllegalArgumentException("node not found: ");
+		throw new IllegalArgumentException("No node with index : "+index);
 
 	}
 }
