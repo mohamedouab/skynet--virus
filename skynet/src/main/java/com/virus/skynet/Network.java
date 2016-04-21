@@ -15,5 +15,38 @@ public class Network {
 	public List<Link> getLinks() {
 		return links;
 	}
+	public List<Node> getGetways(){
+		getways = new ArrayList<Node>();
+		for (Node node : nodes) {
+			if(node.isGetway()){
+				getways.add(node);
+			}
+		}
+		return getways;
+	}
+	 
+	/** initialise les noeud.
+	 * @param nbNodes
+	 */
+	public void initNodes(int nbNodes) {
+		for (int i = 0; i < nbNodes; i++) {
+			nodes.add(new Node(i));
+		}
+
+	}
+	
+	/**  cherche un noeud paar son index
+	 * @param index
+	 * @return
+	 */
+	public Node getNodeByIndex(int index) {
+		for (Node node : nodes) {
+			if(node.getIndex()==index) {
+				return node;
+			}
+		}
+		throw new IllegalArgumentException("node not found: ");
+
+	}
 }
 

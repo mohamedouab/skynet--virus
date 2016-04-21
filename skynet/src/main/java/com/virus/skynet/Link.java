@@ -22,4 +22,13 @@ public class Link {
 	public int getEndIndex() {
 		return end.getIndex();
 	}
+	
+	
+	/** méthode qui verifie si le noeud en paramètre fait partie du lien
+	 * @param node
+	 * @return true || false
+	 */
+	public boolean hasNode(Node node){
+		return start.equals(node)||end.equals(node);
+	}
 }
