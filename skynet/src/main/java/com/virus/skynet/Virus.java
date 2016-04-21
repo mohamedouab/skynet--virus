@@ -6,5 +6,25 @@ package com.virus.skynet;
  */
 
 public class Virus {
+	
+	public Link findAndRemoveNextLink(Network network, SkynetAgent agent){
+		// le lien par defaut à supprimer c'est le premier lien
+		Link result = network.getLinks().get(0);
+
+		Node agentPosition = agent.getCurrentPosition();
+
+		for (Link link : network.getLinks()) {
+			// on cherche la passerelle la plus proche de la position de l'agent skynet
+			for (Node getway : network.getGetways()) {
+				if(link.hasNode(agentPosition) && link.hasNode(getway)){
+					result=link;
+			      return result;
+				}
+			}
+			
+		}
+		network.getLinks().remove(result);
+		return result;
+	}
 
 }
